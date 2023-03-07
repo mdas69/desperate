@@ -39,6 +39,10 @@ public class DriverFactory {
 			} else if (env.equals("stg")) {
 				System.out.println("Running in the STG env. . . ");
 				file = new FileInputStream("./src/test/resources/config/stg.config.properties");
+			} 
+			else  {
+				System.out.println("Running in the QA env since you did not provide the env value. . . ");
+				file = new FileInputStream("./src/test/resources/config/qa.config.properties");
 			}
 		}
 
@@ -70,7 +74,7 @@ public class DriverFactory {
 		}
 		if (browserName.equalsIgnoreCase("Edge")) {
 			WebDriverManager.edgedriver().setup();
-			//driver = new EdgeDriver();
+			// driver = new EdgeDriver();
 			threadLocalDriver.set(new ChromeDriver());
 		}
 
