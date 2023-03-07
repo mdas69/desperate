@@ -2,23 +2,27 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="CRMPRO Regression Suite" thread-count="5"
 	verbose="4">
-	
 	<listeners>
 		<listener
-				class-name="com.qa.crmpro.listeners.TestAllureListener" />
+			class-name="com.qa.crmpro.listeners.TestAllureListener" />
 	</listeners>
-	
 	<listeners>
 		<listener
 			class-name="com.qa.crmpro.listeners.ExtentReportListener" />
 	</listeners>
-	
-	
-	
 	<test name="Login Page Test">
 		<classes>
 			<class name="com.qa.crmpro.tests.LoginPageTest" />
 		</classes>
 	</test>
+	<test name="Accounts Page Test">
+		<classes>
+			<class name="com.qa.crmpro.tests.AccountsPageTest" />
+		</classes>
+	</test>
+	<test name="Registration Page Test">
+		<classes>
+			<class name="com.qa.crmpro.tests.RegistrationPageTest" />
+		</classes>
+	</test>
 </suite>
-
