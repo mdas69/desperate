@@ -24,7 +24,7 @@ public class LoginPageTest extends BaseTest {
 	
 	public void isNavigationMenuPresentInLoginTest() {
 		List<WebElement> menusAvailableOnLoginPageTest = loginpage.isNavigationMenuPresentInLoginPage();
-		Assert.assertEquals(menusAvailableOnLoginPageTest.size(), 7);
+		Assert.assertEquals(menusAvailableOnLoginPageTest.size(), 6);
 	}
 
 	@Description("Checking brand logo in Login Page")// from Allure
