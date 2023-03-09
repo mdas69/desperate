@@ -5,11 +5,12 @@ pipeline
   	maven 'Maven_Mdas' 
  	}
  	
- 	stages{
+ 	stages
+ 	{
  
   		stage('Test'){
  			steps{
- 				catchEroor(buildResult: 'SUCCESS' , stageResult: 'FAILURE'){
+ 				catchError(buildResult: 'SUCCESS' , stageResult: 'FAILURE'){
  				git 'https://github.com/mdas69/desperate.git'
  				bat "mvn clean install"
  				}
