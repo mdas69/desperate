@@ -11,7 +11,7 @@ pipeline
  			steps{
  				catchEroor(buildResult: 'SUCCESS' , stageResult: 'FAILURE'){
  				git 'https://github.com/mdas69/desperate.git'
- 				sh "mvn clean install"
+ 				bat "mvn clean install"
  				}
  			}
  		}
@@ -22,11 +22,11 @@ pipeline
  			steps {
  				script {
  		 		allure ([
- 		 		includeProperties: false,
- 		 		jdk: '',
- 		 		properties: [],
-				reportBuildPolicy: 'ALWAYS',
-				results: [[path: '/allure-results']]
+ 		 			includeProperties: false,
+ 		 			jdk: '',
+ 		 			properties: [],
+					reportBuildPolicy: 'ALWAYS',
+					results: [[path: '/allure-results']]
 						])
 					}
 				}
