@@ -45,7 +45,7 @@ public class LoginPageTest extends BaseTest {
 		String username = properties.getProperty("username").trim();
 		String password = properties.getProperty("password").trim();
 		accountspage = loginpage.logging(username, password);
-		System.out.println("This line of code is only for the webhook purpose");
+		System.out.println("This line of code is only for the webhook purposess");
 		
 		// can write assert for accounts page
 	}
