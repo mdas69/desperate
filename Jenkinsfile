@@ -2,7 +2,7 @@ pipeline
 {
   agent any
   tools {
-  	maven 'Maven_Mdas" 
+  	maven 'Maven_Mdas' 
  	}
  	
  	stages{
