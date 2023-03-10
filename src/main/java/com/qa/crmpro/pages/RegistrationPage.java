@@ -9,10 +9,15 @@ import org.openqa.selenium.WebElement;
 import com.qa.crmpro.utils.ElementUtils;
 
 public class RegistrationPage {
+	
+	
+	private WebDriver driver;
+	private ElementUtils eleUtils;
 
-	ElementUtils eleUtils;
-	WebDriver driver;
-
+	/*
+	 * ElementUtils eleUtils; 
+	 * WebDriver driver;
+	 */
 	public RegistrationPage(WebDriver driver) {
 		this.driver = driver;
 		this.eleUtils = new ElementUtils(driver);
