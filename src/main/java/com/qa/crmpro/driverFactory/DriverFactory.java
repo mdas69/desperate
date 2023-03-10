@@ -28,12 +28,13 @@ public class DriverFactory {
 		 */
 		String env = System.getProperty("env");
 		try {
+
 			
-			if (env == null) {
-				System.out.println("Running in the QA env since you did not provide the env value. . . ");
-				file = new FileInputStream("./src/test/resources/config/qa.config.properties");
-			}
-			else if (env.equalsIgnoreCase("qa")) {
+			  if (env == null) { 
+				  System.out.  println("Running in the QA env since you did not provide the env value. . . "	  );
+				  file = new  FileInputStream("./src/test/resources/config/qa.config.properties"); } 
+			  
+			  else if (env.equals("QA")) {
 				System.out.println("Running in the QA env. . . ");
 				file = new FileInputStream("./src/test/resources/config/qa.config.properties");
 
@@ -44,8 +45,8 @@ public class DriverFactory {
 			} else if (env.equalsIgnoreCase("stg")) {
 				System.out.println("Running in the STG env. . . ");
 				file = new FileInputStream("./src/test/resources/config/stg.config.properties");
-			} 
-			
+			}
+
 		}
 
 		catch (FileNotFoundException e) {
