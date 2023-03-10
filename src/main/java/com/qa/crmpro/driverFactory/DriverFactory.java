@@ -34,7 +34,7 @@ public class DriverFactory {
 				  System.out.  println("Running in the QA env since you did not provide the env value. . . "	  );
 				  file = new  FileInputStream("./src/test/resources/config/qa.config.properties"); } 
 			  
-			  else if (env.equals("QA")) {
+			  else if (env.equalsIgnoreCase("QA")) {
 				System.out.println("Running in the QA env. . . ");
 				file = new FileInputStream("./src/test/resources/config/qa.config.properties");
 
